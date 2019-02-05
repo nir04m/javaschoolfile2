@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html class="" lang="en"><head prefix="og: http://ogp.me/ns#">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="demo3/playerTest.java · master · sehajveer.bring / Monopoly_Game_Project" property="og:title">
+<meta content="Computer Science Gitlab Server" property="og:description">
+<meta content="https://gitlab.cpsc.ucalgary.ca/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/blob/master/demo3/playerTest.java" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="demo3/playerTest.java · master · sehajveer.bring / Monopoly_Game_Project" property="twitter:title">
+<meta content="Computer Science Gitlab Server" property="twitter:description">
+<meta content="https://gitlab.cpsc.ucalgary.ca/assets/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png" property="twitter:image">
+
+<title>demo3/playerTest.java · master · sehajveer.bring / Monopoly_Game_Project · GitLab</title>
+<meta content="Computer Science Gitlab Server" name="description">
+<link rel="shortcut icon" type="image/x-icon" href="https://gitlab.cpsc.ucalgary.ca/assets/favicon-075eba76312e8421991a0c1f89a89ee81678bcde72319dd3e8047e2a47cd3a42.ico" id="favicon">
+<link rel="stylesheet" media="all" href="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/application-262997af4d0f794a422edc1f970585beb733602c54bb27e6.css">
+<link rel="stylesheet" media="print" href="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/print-87b4ace0db1f79d91e4fe6e74435b66b71d70fee57ffbb72d0fade.css">
+
+
+<script>
+//<![CDATA[
+window.gon={};gon.api_version="v4";gon.default_avatar_url="https:\/\/gitlab.cpsc.ucalgary.ca\/assets\/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=10;gon.asset_host=null;gon.webpack_public_path="\/assets\/webpack\/";gon.relative_url_root="";gon.shortcuts_path="\/help\/shortcuts";gon.user_color_scheme="white";gon.katex_css_url="\/assets\/katex-e46cafe9c3fa73920a7c2c063ee8bb0613e0cf85fd96a3aea25f8419c4bfcfba.css";gon.katex_js_url="\/assets\/katex-04bcf56379fcda0ee7c7a63f71d0fc15ffd2e014d017cd9d51fd6554dfccf40a.js";gon.gitlab_url="https:\/\/gitlab.cpsc.ucalgary.ca";gon.revision="3cf5eba";gon.gitlab_logo="\/assets\/gitlab_logo-7ae504fe4f68fdebb3c2034e36621930cd36ea87924c11ff65dbcb8ed50dca58.png";gon.current_user_id=602;gon.current_username="oghale.enwa1";gon.current_user_fullname="oghale.enwa1";gon.current_user_avatar_url="https:\/\/secure.gravatar.com\/avatar\/4038f9a3392bf3975c3ce2531108de75?s=80\u0026d=identicon";
+//]]>
+</script>
+<script src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/webpack_runtime.js" defer="defer"></script>
+<script src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/common.js" defer="defer"></script>
+<script src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/locale.js" defer="defer"></script>
+<script src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/main.js" defer="defer"></script>
+
+
+
+<script src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/blob.js" defer="defer"></script>
+<script src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/blob.js" defer="defer"></script>
+
+<script>
+  window.uploads_path = "/sehajveer.bring/Monopoly_Game_Project/uploads";
+</script>
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="BAvHzcQEqoJZICEaW6DCr3lhysh1Ws56M5uSuqJbsi7OYmwVlGXaKBYjXa/Oo38DmnL8XMkhZg+wTN6ykc2Zfg==">
+<meta content="origin-when-cross-origin" name="referrer">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<meta content="#474D57" name="theme-color">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.cpsc.ucalgary.ca/assets/touch-icon-iphone-5a9cee0e8a51212e70b90c87c12f382c428870c0ff67d1eb034d884b78d2dae7.png">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.cpsc.ucalgary.ca/assets/touch-icon-ipad-a6eec6aeb9da138e507593b464fdac213047e49d3093fc30e90d9a995df83ba3.png" sizes="76x76">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.cpsc.ucalgary.ca/assets/touch-icon-iphone-retina-72e2aadf86513a56e050e7f0f2355deaa19cc17ed97bbe5147847f2748e5a3e3.png" sizes="120x120">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://gitlab.cpsc.ucalgary.ca/assets/touch-icon-ipad-retina-8ebe416f5313483d9c1bc772b5bbe03ecad52a54eba443e5215a22caed2a16a2.png" sizes="152x152">
+<link color="rgb(226, 67, 41)" href="https://gitlab.cpsc.ucalgary.ca/assets/logo-d36b5212042cebc89b96df4bf6ac24e43db316143e89926c0db839ff694d2de4.svg" rel="mask-icon">
+<meta content="/assets/msapplication-tile-1196ec67452f618d39cdd85e2e3a542f76574c071051ae7effbfde01710eb17d.png" name="msapplication-TileImage">
+<meta content="#30353E" name="msapplication-TileColor">
+
+
+
+
+<script type="text/javascript" charset="utf-8" async="" src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/emoji.js"></script></head>
+
+<body class="" data-find-file="/sehajveer.bring/Monopoly_Game_Project/find_file/master" data-group="" data-page="projects:blob:show" data-project="Monopoly_Game_Project">
+
+
+<header class="navbar navbar-gitlab with-horizontal-nav">
+<div class="navbar-border"></div>
+<a class="sr-only gl-accessibility" href="#content-body" tabindex="1">Skip to content</a>
+<div class="container-fluid">
+<div class="header-content">
+<div class="dropdown global-dropdown">
+<button class="global-dropdown-toggle" data-toggle="dropdown" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i aria-hidden="true" data-hidden="true" class="fa fa-bars"></i>
+</button>
+<div class="dropdown-menu-nav global-dropdown-menu">
+<ul>
+<li class="active home"><a title="Projects" class="dashboard-shortcuts-projects" href="https://gitlab.cpsc.ucalgary.ca/dashboard/projects"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+P
+</div>
+</div>
+<span>
+Projects
+</span>
+</a></li><li class=""><a class="dashboard-shortcuts-activity" title="Activity" href="https://gitlab.cpsc.ucalgary.ca/dashboard/activity"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+A
+</div>
+</div>
+<span>
+Activity
+</span>
+</a></li><li class=""><a class="dashboard-shortcuts-groups" title="Groups" href="https://gitlab.cpsc.ucalgary.ca/dashboard/groups"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+G
+</div>
+</div>
+<span>
+Groups
+</span>
+</a></li><li class=""><a class="dashboard-shortcuts-milestones" title="Milestones" href="https://gitlab.cpsc.ucalgary.ca/dashboard/milestones"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+L
+</div>
+</div>
+<span>
+Milestones
+</span>
+</a></li><li class=""><a title="Issues" class="dashboard-shortcuts-issues" href="https://gitlab.cpsc.ucalgary.ca/dashboard/issues?assignee_id=602"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+I
+</div>
+</div>
+<span class="badge pull-right">0</span>
+<span>
+Issues
+</span>
+</a></li><li class=""><a title="Merge Requests" class="dashboard-shortcuts-merge_requests" href="https://gitlab.cpsc.ucalgary.ca/dashboard/merge_requests?assignee_id=602"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+M
+</div>
+</div>
+<span class="badge pull-right">0</span>
+<span>
+Merge Requests
+</span>
+</a></li><li class=""><a class="dashboard-shortcuts-snippets" title="Snippets" href="https://gitlab.cpsc.ucalgary.ca/dashboard/snippets"><div class="shortcut-mappings">
+<div class="key">
+<i aria-label="hidden" class="fa fa-arrow-up"></i>
+S
+</div>
+</div>
+<span>
+Snippets
+</span>
+</a></li><li class="divider"></li>
+<li>
+<a title="About GitLab CE" class="about-gitlab" href="https://gitlab.cpsc.ucalgary.ca/help">Help</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="header-logo">
+<a class="home" title="Dashboard" id="logo" href="https://gitlab.cpsc.ucalgary.ca/"><svg width="28" height="28" class="tanuki-logo" viewBox="0 0 36 36">
+  <path class="tanuki-shape tanuki-left-ear" fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+  <path class="tanuki-shape tanuki-right-ear" fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+  <path class="tanuki-shape tanuki-nose" fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+  <path class="tanuki-shape tanuki-left-eye" fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+  <path class="tanuki-shape tanuki-right-eye" fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+  <path class="tanuki-shape tanuki-left-cheek" fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+  <path class="tanuki-shape tanuki-right-cheek" fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+</svg>
+
+</a></div>
+<div class="title-container js-title-container">
+<h1 class="title"><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring">sehajveer.bring</a> / <a class="project-item-select-holder" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project">Monopoly_Game_Project</a><button name="button" type="button" class="dropdown-toggle-caret js-projects-dropdown-toggle" aria-label="Toggle switch project dropdown" data-target=".js-dropdown-menu-projects" data-toggle="dropdown" data-order-by="last_activity_at"><i aria-hidden="true" data-hidden="true" class="fa fa-chevron-down"></i></button></h1>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="hidden-sm hidden-xs">
+<div class="has-location-badge search search-form">
+<form class="navbar-form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden"><div class="search-input-container">
+<div class="location-badge">This project</div>
+<div class="search-input-wrap">
+<div class="dropdown" data-url="/search/autocomplete">
+<input name="search" id="search" placeholder="Search" class="search-input dropdown-menu-toggle no-outline js-search-dashboard-options disabled" spellcheck="false" tabindex="1" autocomplete="off" data-toggle="dropdown" data-issues-path="https://gitlab.cpsc.ucalgary.ca/dashboard/issues" data-mr-path="https://gitlab.cpsc.ucalgary.ca/dashboard/merge_requests" aria-label="Search" type="search">
+<div class="dropdown-menu dropdown-select">
+<div class="dropdown-content"><ul>
+<li>
+<a class="is-focused dropdown-menu-empty-link">
+Loading...
+</a>
+</li>
+</ul>
+</div><div class="dropdown-loading"><i aria-hidden="true" data-hidden="true" class="fa fa-spinner fa-spin"></i></div>
+</div>
+<i class="search-icon"></i>
+<i class="clear-icon js-clear-input"></i>
+</div>
+</div>
+</div>
+<input name="group_id" id="group_id" class="js-search-group-options" type="hidden">
+<input name="project_id" id="search_project_id" value="1124" class="js-search-project-options" data-project-path="Monopoly_Game_Project" data-name="Monopoly_Game_Project" data-issues-path="/sehajveer.bring/Monopoly_Game_Project/issues" data-mr-path="/sehajveer.bring/Monopoly_Game_Project/merge_requests" type="hidden">
+<input name="search_code" id="search_code" value="true" type="hidden">
+<input name="repository_ref" id="repository_ref" value="master" type="hidden">
+
+<div class="search-autocomplete-opts hide" data-autocomplete-path="/search/autocomplete" data-autocomplete-project-id="1124" data-autocomplete-project-ref="master"></div>
+</form></div>
+
+</li>
+<li class="visible-sm-inline-block visible-xs-inline-block">
+<a title="Search" aria-label="Search" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://gitlab.cpsc.ucalgary.ca/search"><i aria-hidden="true" data-hidden="true" class="fa fa-search"></i>
+</a></li>
+<li class="header-new dropdown">
+<a class="header-new-dropdown-toggle has-tooltip" title="New..." ref="tooltip" aria-label="New..." data-toggle="dropdown" data-placement="bottom" data-container="body" href="https://gitlab.cpsc.ucalgary.ca/projects/new"><i aria-hidden="true" data-hidden="true" class="fa fa-plus fa-fw"></i>
+<i aria-hidden="true" data-hidden="true" class="fa fa-caret-down"></i>
+</a><div class="dropdown-menu-nav dropdown-menu-align-right">
+<ul>
+<li class="dropdown-bold-header">This project</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/issues/new">New issue</a>
+</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/merge_requests/new">New merge request</a>
+</li>
+<li class="header-new-project-snippet">
+<a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/snippets/new">New snippet</a>
+</li>
+<li class="divider"></li>
+<li class="dropdown-bold-header">GitLab</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/projects/new">New project</a>
+</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/snippets/new">New snippet</a>
+</li>
+</ul>
+</div>
+</li>
+
+<li>
+<a title="Issues" aria-label="Issues" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://gitlab.cpsc.ucalgary.ca/dashboard/issues?assignee_id=602"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M10.458 15.012l.311.055a3 3 0 0 0 3.476-2.433l1.389-7.879A3 3 0 0 0 13.2 1.28L11.23.933a3.002 3.002 0 0 0-.824-.031c.364.59.58 1.28.593 2.02l1.854.328a1 1 0 0 1 .811 1.158l-1.389 7.879a1 1 0 0 1-1.158.81l-.118-.02a3.98 3.98 0 0 1-.541 1.935zM3 0h4a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3z"></path></svg>
+
+<span class="badge hidden issues-count">
+0
+</span>
+</a></li>
+<li>
+<a title="Merge requests" aria-label="Merge requests" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://gitlab.cpsc.ucalgary.ca/dashboard/merge_requests?assignee_id=602"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m5 5.563v4.875c1.024.4 1.75 1.397 1.75 2.563 0 1.519-1.231 2.75-2.75 2.75-1.519 0-2.75-1.231-2.75-2.75 0-1.166.726-2.162 1.75-2.563v-4.875c-1.024-.4-1.75-1.397-1.75-2.563 0-1.519 1.231-2.75 2.75-2.75 1.519 0 2.75 1.231 2.75 2.75 0 1.166-.726 2.162-1.75 2.563m-1 8.687c.69 0 1.25-.56 1.25-1.25 0-.69-.56-1.25-1.25-1.25-.69 0-1.25.56-1.25 1.25 0 .69.56 1.25 1.25 1.25m0-10c.69 0 1.25-.56 1.25-1.25 0-.69-.56-1.25-1.25-1.25-.69 0-1.25.56-1.25 1.25 0 .69.56 1.25 1.25 1.25"></path><path d="m10.501 2c1.381.001 2.499 1.125 2.499 2.506v5.931c1.024.4 1.75 1.397 1.75 2.563 0 1.519-1.231 2.75-2.75 2.75-1.519 0-2.75-1.231-2.75-2.75 0-1.166.726-2.162 1.75-2.563v-5.931c0-.279-.225-.506-.499-.506v.926c0 .346-.244.474-.569.271l-2.952-1.844c-.314-.196-.325-.507 0-.71l2.952-1.844c.314-.196.569-.081.569.271v.93m1.499 12.25c.69 0 1.25-.56 1.25-1.25 0-.69-.56-1.25-1.25-1.25-.69 0-1.25.56-1.25 1.25 0 .69.56 1.25 1.25 1.25"></path></svg>
+
+
+<span class="badge hidden merge-requests-count">
+0
+</span>
+</a></li>
+<li>
+<a title="Todos" aria-label="Todos" class="shortcuts-todos" data-toggle="tooltip" data-placement="bottom" data-container="body" href="https://gitlab.cpsc.ucalgary.ca/dashboard/todos"><i aria-hidden="true" data-hidden="true" class="fa fa-check-circle fa-fw"></i>
+<span class="badge hidden todos-count">
+0
+</span>
+</a></li>
+<li class="header-user dropdown">
+<a class="header-user-dropdown-toggle" data-toggle="dropdown" href="https://gitlab.cpsc.ucalgary.ca/oghale.enwa1"><img class="header-user-avatar js-lazy-loaded" src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/4038f9a3392bf3975c3ce2531108de75.png" width="26" height="26">
+<i aria-hidden="true" data-hidden="true" class="fa fa-caret-down"></i>
+</a><div class="dropdown-menu-nav dropdown-menu-align-right">
+<ul>
+<li class="current-user">
+<div class="user-name bold">
+oghale.enwa1
+</div>
+@oghale.enwa1
+</li>
+<li class="divider"></li>
+<li>
+<a class="profile-link" data-user="oghale.enwa1" href="https://gitlab.cpsc.ucalgary.ca/oghale.enwa1">Profile</a>
+</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/profile">Settings</a>
+</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/profile/preferences#new-navigation">Turn on new navigation</a>
+</li>
+<li class="divider"></li>
+<li>
+<a class="sign-out-link" rel="nofollow" data-method="delete" href="https://gitlab.cpsc.ucalgary.ca/users/sign_out">Sign out</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<button class="navbar-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<i aria-hidden="true" data-hidden="true" class="fa fa-ellipsis-v"></i>
+</button>
+<div class="js-dropdown-menu-projects">
+<div class="dropdown-menu dropdown-select dropdown-menu-projects">
+<div class="dropdown-title"><span>Go to a project</span><button class="dropdown-title-button dropdown-menu-close" aria-label="Close" type="button"><i aria-hidden="true" data-hidden="true" class="fa fa-times dropdown-menu-close-icon"></i></button></div>
+<div class="dropdown-input"><input id="" class="dropdown-input-field" placeholder="Search your projects" autocomplete="off" type="search"><i aria-hidden="true" data-hidden="true" class="fa fa-search dropdown-input-search"></i><i role="button" aria-hidden="true" data-hidden="true" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i></div>
+<div class="dropdown-content"></div>
+<div class="dropdown-loading"><i aria-hidden="true" data-hidden="true" class="fa fa-spinner fa-spin"></i></div>
+</div>
+</div>
+
+</div>
+</div>
+</header>
+
+
+<div class="page-with-sidebar">
+<div class="layout-nav">
+<div class="container-fluid">
+<div class="nav-control scrolling-tabs-container">
+<div class="fade-left">
+<i aria-hidden="true" data-hidden="true" class="fa fa-angle-left"></i>
+</div>
+<div class="fade-right">
+<i aria-hidden="true" data-hidden="true" class="fa fa-angle-right"></i>
+</div>
+<ul class="nav-links scrolling-tabs is-initialized">
+<li class="home"><a title="Project" class="shortcuts-project" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project"><span>
+Project
+</span>
+</a></li><li class="active"><a title="Repository" class="shortcuts-tree" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/tree/master"><span>
+Repository
+</span>
+</a></li><li class=""><a title="Issues" class="shortcuts-issues" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/issues"><span>
+Issues
+<span class="badge count issue_counter">0</span>
+</span>
+</a></li><li class=""><a title="Merge Requests" class="shortcuts-merge_requests" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/merge_requests"><span>
+Merge Requests
+<span class="badge count merge_counter js-merge-counter">1</span>
+</span>
+</a></li><li class=""><a title="Pipelines" class="shortcuts-pipelines" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/pipelines"><span>
+Pipelines
+</span>
+</a></li><li class=""><a title="Wiki" class="shortcuts-wiki" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/wikis/home"><span>
+Wiki
+</span>
+</a></li><li class=""><a title="Snippets" class="shortcuts-snippets" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/snippets"><span>
+Snippets
+</span>
+</a></li><li class=""><a title="Members" class="shortcuts-members" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/project_members"><span>
+Members
+</span>
+</a></li><li class=""><a title="Settings" class="shortcuts-tree" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/edit"><span>
+Settings
+</span>
+</a></li><li class="hidden">
+<a title="Activity" class="shortcuts-project-activity" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/activity"><span>
+Activity
+</span>
+</a></li>
+<li class="hidden">
+<a title="Network" class="shortcuts-network" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/network/master">Graph
+</a></li>
+<li class="hidden">
+<a title="Charts" class="shortcuts-repository-charts" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/graphs/master/charts">Charts
+</a></li>
+<li class="hidden">
+<a class="shortcuts-new-issue" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/issues/new">Create a new issue
+</a></li>
+<li class="hidden">
+<a title="Jobs" class="shortcuts-builds" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/-/jobs">Jobs
+</a></li>
+<li class="hidden">
+<a title="Commits" class="shortcuts-commits" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/commits/master">Commits
+</a></li>
+<li class="hidden">
+<a title="Issue Boards" class="shortcuts-issue-boards" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/boards">Issue Boards</a>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="scrolling-tabs-container sub-nav-scroll">
+<div class="fade-left">
+<i aria-hidden="true" data-hidden="true" class="fa fa-angle-left"></i>
+</div>
+<div class="fade-right">
+<i aria-hidden="true" data-hidden="true" class="fa fa-angle-right"></i>
+</div>
+
+<div class="nav-links sub-nav scrolling-tabs is-initialized">
+<ul class="container-fluid container-limited">
+<li class="active"><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/tree/master">Files
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/commits/master">Commits
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/branches">Branches
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/tags">Tags
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/graphs/master">Contributors
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/network/master">Graph
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/compare?from=master&amp;to=master">Compare
+</a></li><li class=""><a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/graphs/master/charts">Charts
+</a></li></ul>
+</div>
+</div>
+
+<div class="content-wrapper page-with-layout-nav page-with-sub-nav">
+<div class="alert-wrapper">
+
+<div class="flash-container flash-container-page">
+</div>
+
+
+</div>
+<div class=" ">
+<div class="content" id="content-body">
+
+
+<div class="container-fluid container-limited">
+<div class="tree-holder" id="tree-holder">
+<div class="nav-block">
+<div class="tree-ref-container">
+<div class="tree-ref-holder">
+<form class="project-refs-form" action="/sehajveer.bring/Monopoly_Game_Project/refs/switch" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden"><input name="destination" id="destination" value="blob" type="hidden">
+<input name="path" id="path" value="demo3/playerTest.java" type="hidden">
+<div class="dropdown">
+<button class="dropdown-menu-toggle js-project-refs-dropdown" type="button" data-toggle="dropdown" data-selected="master" data-ref="master" data-refs-url="/sehajveer.bring/Monopoly_Game_Project/refs" data-field-name="ref" data-submit-form-on-click="true" data-visit="true"><span class="dropdown-toggle-text ">master</span><i aria-hidden="true" data-hidden="true" class="fa fa-chevron-down"></i></button>
+<div class="dropdown-menu dropdown-menu-selectable git-revision-dropdown">
+<div class="dropdown-title"><span>Switch branch/tag</span><button class="dropdown-title-button dropdown-menu-close" aria-label="Close" type="button"><i aria-hidden="true" data-hidden="true" class="fa fa-times dropdown-menu-close-icon"></i></button></div>
+<div class="dropdown-input"><input id="" class="dropdown-input-field" placeholder="Search branches and tags" autocomplete="off" type="search"><i aria-hidden="true" data-hidden="true" class="fa fa-search dropdown-input-search"></i><i role="button" aria-hidden="true" data-hidden="true" class="fa fa-times dropdown-input-clear js-dropdown-input-clear"></i></div>
+<div class="dropdown-content"></div>
+<div class="dropdown-loading"><i aria-hidden="true" data-hidden="true" class="fa fa-spinner fa-spin"></i></div>
+</div>
+</div>
+</form>
+</div>
+<ul class="breadcrumb repo-breadcrumb">
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/tree/master">Monopoly_Game_Project
+</a></li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/tree/master/demo3">demo3</a>
+</li>
+<li>
+<a href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/blob/master/demo3/playerTest.java"><strong>playerTest.java</strong>
+</a></li>
+</ul>
+</div>
+<div class="tree-controls">
+<a class="btn shortcuts-find-file" rel="nofollow" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/find_file/master"><i aria-hidden="true" data-hidden="true" class="fa fa-search"></i>
+<span>Find file</span>
+</a>
+<div class="btn-group" role="group"><a class="btn js-blob-blame-link" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/blame/master/demo3/playerTest.java">Blame</a><a class="btn" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/commits/master/demo3/playerTest.java">History</a><a class="btn js-data-file-blob-permalink-url" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/blob/2371290907f6cc80fca7779e92b3aaf704bf065a/demo3/playerTest.java">Permalink</a></div>
+</div>
+</div>
+
+<div class="info-well hidden-xs">
+<div class="well-segment">
+<ul class="blob-commit-info">
+<li class="commit flex-row js-toggle-container" id="commit-23712909">
+<div class="avatar-cell hidden-xs">
+<a href="https://gitlab.cpsc.ucalgary.ca/david.akobundu"><img class="avatar s36 hidden-xs has-tooltip js-lazy-loaded" alt="david.akobundu's avatar" title="david.akobundu" data-container="body" src="demo3_playerTest.java%20%C2%B7%20master%20%C2%B7%20sehajveer.bring%20_%20Monopoly_Game_Project%20%C2%B7%20GitLab_files/27e13b5264bdb1ed910f74b1ac8ffe65.png"></a>
+</div>
+<div class="commit-detail">
+<div class="commit-content">
+<a class="commit-row-message item-title" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/commit/2371290907f6cc80fca7779e92b3aaf704bf065a">Upload New File</a>
+<span class="commit-row-message visible-xs-inline">
+·
+23712909
+</span>
+<div class="commiter">
+<a class="commit-author-link has-tooltip" title="david.akobundu@cs.ucalgary.ca" href="https://gitlab.cpsc.ucalgary.ca/david.akobundu">david.akobundu</a> committed <time class="js-timeago js-timeago-render" title="" datetime="2017-11-20T20:10:04Z" data-toggle="tooltip" data-placement="top" data-container="body" data-original-title="Nov 20, 2017 8:10pm">5 minutes ago</time>
+</div>
+</div>
+<div class="commit-actions hidden-xs">
+
+<a class="commit-sha btn btn-transparent" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/commit/2371290907f6cc80fca7779e92b3aaf704bf065a">23712909</a>
+<button class="btn btn-clipboard btn-transparent" data-toggle="tooltip" data-placement="bottom" data-container="body" data-title="Copy commit SHA to clipboard" data-clipboard-text="2371290907f6cc80fca7779e92b3aaf704bf065a" type="button" title="Copy commit SHA to clipboard" aria-label="Copy commit SHA to clipboard"><i aria-hidden="true" data-hidden="true" class="fa fa-clipboard"></i></button>
+
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+
+</div>
+<div class="blob-content-holder" id="blob-content-holder">
+<article class="file-holder">
+<div class="js-file-title file-title-flex-parent">
+<div class="file-header-content">
+<i aria-hidden="true" data-hidden="true" class="fa fa-file-text-o fa-fw"></i>
+<strong class="file-title-name">
+playerTest.java
+</strong>
+<button class="btn btn-clipboard btn-transparent prepend-left-5" data-toggle="tooltip" data-placement="bottom" data-container="body" data-class="btn-clipboard btn-transparent prepend-left-5" data-title="Copy file path to clipboard" data-clipboard-text="{&quot;text&quot;:&quot;demo3/playerTest.java&quot;,&quot;gfm&quot;:&quot;`demo3/playerTest.java`&quot;}" type="button" title="Copy file path to clipboard" aria-label="Copy file path to clipboard"><i aria-hidden="true" data-hidden="true" class="fa fa-clipboard"></i></button>
+<small>
+824 Bytes
+</small>
+</div>
+
+<div class="file-actions hidden-xs">
+
+<div class="btn-group" role="group"><button class="btn btn-sm js-copy-blob-source-btn" data-toggle="tooltip" data-placement="bottom" data-container="body" data-class="btn btn-sm js-copy-blob-source-btn" data-title="Copy source to clipboard" data-clipboard-target=".blob-content[data-blob-id='2522b10481147490f356ce5042034225c9788129']" type="button" title="" aria-label="Copy source to clipboard" data-original-title="Copy source to clipboard"><i aria-hidden="true" data-hidden="true" class="fa fa-clipboard"></i></button><a class="btn btn-sm has-tooltip" target="_blank" rel="noopener noreferrer" title="Open raw" data-container="body" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/raw/master/demo3/playerTest.java"><i aria-hidden="true" data-hidden="true" class="fa fa-file-code-o"></i></a></div>
+<div class="btn-group" role="group"><a class="btn js-edit-blob  btn-sm" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/edit/master/demo3/playerTest.java">Edit</a><button name="button" type="submit" class="btn btn-default" data-target="#modal-upload-blob" data-toggle="modal">Replace</button><button name="button" type="submit" class="btn btn-remove" data-target="#modal-remove-blob" data-toggle="modal">Delete</button></div>
+</div>
+</div>
+<div class="js-file-fork-suggestion-section file-fork-suggestion hidden">
+<span class="file-fork-suggestion-note">
+You're not allowed to
+<span class="js-file-fork-suggestion-section-action">
+edit
+</span>
+files in this project directly. Please fork this project,
+make your changes there, and submit a merge request.
+</span>
+<a class="js-fork-suggestion-button btn btn-grouped btn-inverted btn-new" rel="nofollow" data-method="post" href="https://gitlab.cpsc.ucalgary.ca/sehajveer.bring/Monopoly_Game_Project/blob/master/demo3/playerTest.java">Fork</a>
+<button class="js-cancel-fork-suggestion-button btn btn-grouped" type="button">
+Cancel
+</button>
+</div>
+
+
+<div class="blob-viewer" data-type="simple" data-url="/sehajveer.bring/Monopoly_Game_Project/blob/master/demo3/playerTest.java?format=json&amp;viewer=simple" data-loading="true" data-loaded="true"><div class="blob-viewer" data-type="simple">
+<div class="file-content code js-syntax-highlight white">
+<div class="line-numbers">
+<a class="diff-line-num" data-line-number="1" href="#L1" id="L1">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+1
+</a>
+<a class="diff-line-num" data-line-number="2" href="#L2" id="L2">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+2
+</a>
+<a class="diff-line-num" data-line-number="3" href="#L3" id="L3">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+3
+</a>
+<a class="diff-line-num" data-line-number="4" href="#L4" id="L4">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+4
+</a>
+<a class="diff-line-num" data-line-number="5" href="#L5" id="L5">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+5
+</a>
+<a class="diff-line-num" data-line-number="6" href="#L6" id="L6">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+6
+</a>
+<a class="diff-line-num" data-line-number="7" href="#L7" id="L7">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+7
+</a>
+<a class="diff-line-num" data-line-number="8" href="#L8" id="L8">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+8
+</a>
+<a class="diff-line-num" data-line-number="9" href="#L9" id="L9">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+9
+</a>
+<a class="diff-line-num" data-line-number="10" href="#L10" id="L10">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+10
+</a>
+<a class="diff-line-num" data-line-number="11" href="#L11" id="L11">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+11
+</a>
+<a class="diff-line-num" data-line-number="12" href="#L12" id="L12">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+12
+</a>
+<a class="diff-line-num" data-line-number="13" href="#L13" id="L13">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+13
+</a>
+<a class="diff-line-num" data-line-number="14" href="#L14" id="L14">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+14
+</a>
+<a class="diff-line-num" data-line-number="15" href="#L15" id="L15">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+15
+</a>
+<a class="diff-line-num" data-line-number="16" href="#L16" id="L16">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+16
+</a>
+<a class="diff-line-num" data-line-number="17" href="#L17" id="L17">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+17
+</a>
+<a class="diff-line-num" data-line-number="18" href="#L18" id="L18">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+18
+</a>
+<a class="diff-line-num" data-line-number="19" href="#L19" id="L19">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+19
+</a>
+<a class="diff-line-num" data-line-number="20" href="#L20" id="L20">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+20
+</a>
+<a class="diff-line-num" data-line-number="21" href="#L21" id="L21">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+21
+</a>
+<a class="diff-line-num" data-line-number="22" href="#L22" id="L22">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+22
+</a>
+<a class="diff-line-num" data-line-number="23" href="#L23" id="L23">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+23
+</a>
+<a class="diff-line-num" data-line-number="24" href="#L24" id="L24">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+24
+</a>
+<a class="diff-line-num" data-line-number="25" href="#L25" id="L25">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+25
+</a>
+<a class="diff-line-num" data-line-number="26" href="#L26" id="L26">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+26
+</a>
+<a class="diff-line-num" data-line-number="27" href="#L27" id="L27">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+27
+</a>
+<a class="diff-line-num" data-line-number="28" href="#L28" id="L28">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+28
+</a>
+<a class="diff-line-num" data-line-number="29" href="#L29" id="L29">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+29
+</a>
+<a class="diff-line-num" data-line-number="30" href="#L30" id="L30">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+30
+</a>
+<a class="diff-line-num" data-line-number="31" href="#L31" id="L31">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+31
+</a>
+<a class="diff-line-num" data-line-number="32" href="#L32" id="L32">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+32
+</a>
+<a class="diff-line-num" data-line-number="33" href="#L33" id="L33">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+33
+</a>
+<a class="diff-line-num" data-line-number="34" href="#L34" id="L34">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+34
+</a>
+<a class="diff-line-num" data-line-number="35" href="#L35" id="L35">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+35
+</a>
+<a class="diff-line-num" data-line-number="36" href="#L36" id="L36">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+36
+</a>
+<a class="diff-line-num" data-line-number="37" href="#L37" id="L37">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+37
+</a>
+<a class="diff-line-num" data-line-number="38" href="#L38" id="L38">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+38
+</a>
+<a class="diff-line-num" data-line-number="39" href="#L39" id="L39">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+39
+</a>
+<a class="diff-line-num" data-line-number="40" href="#L40" id="L40">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+40
+</a>
+<a class="diff-line-num" data-line-number="41" href="#L41" id="L41">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+41
+</a>
+<a class="diff-line-num" data-line-number="42" href="#L42" id="L42">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+42
+</a>
+<a class="diff-line-num" data-line-number="43" href="#L43" id="L43">
+<i aria-hidden="true" data-hidden="true" class="fa fa-link"></i>
+43
+</a>
+</div>
+<div class="blob-content" data-blob-id="2522b10481147490f356ce5042034225c9788129">
+<pre class="code highlight"><code><span id="LC1" class="line" lang="java"><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">junit</span><span class="o">.</span><span class="na">Assert</span><span class="o">.*;</span></span>
+<span id="LC2" class="line" lang="java"></span>
+<span id="LC3" class="line" lang="java"><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span></span>
+<span id="LC4" class="line" lang="java"></span>
+<span id="LC5" class="line" lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">playerTest</span><span class="o">{</span>			</span>
+<span id="LC6" class="line" lang="java">	</span>
+<span id="LC7" class="line" lang="java">	<span class="nd">@Test</span></span>
+<span id="LC8" class="line" lang="java">	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testMoveForPositionLessThan28</span><span class="o">()</span> <span class="o">{</span></span>
+<span id="LC9" class="line" lang="java">		<span class="n">Player</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Player</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">3000</span><span class="o">);</span></span>
+<span id="LC10" class="line" lang="java">		<span class="n">p</span><span class="o">.</span><span class="na">move</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span></span>
+<span id="LC11" class="line" lang="java">		<span class="n">assertEquals</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="n">p</span><span class="o">.</span><span class="na">getPosition</span><span class="o">());</span></span>
+<span id="LC12" class="line" lang="java">	<span class="o">}</span></span>
+<span id="LC13" class="line" lang="java"></span>
+<span id="LC14" class="line" lang="java">	<span class="nd">@Test</span></span>
+<span id="LC15" class="line" lang="java">	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testMoveForPositionGreaterOrEqual28</span><span class="o">()</span> <span class="o">{</span></span>
+<span id="LC16" class="line" lang="java">		<span class="n">Player</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Player</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">,</span><span class="mi">29</span><span class="o">,</span><span class="mi">3000</span><span class="o">);</span></span>
+<span id="LC17" class="line" lang="java">		<span class="n">p</span><span class="o">.</span><span class="na">move</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span></span>
+<span id="LC18" class="line" lang="java">		<span class="n">assertEquals</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span><span class="n">p</span><span class="o">.</span><span class="na">getPosition</span><span class="o">());</span></span>
+<span id="LC19" class="line" lang="java">	<span class="o">}</span></span>
+<span id="LC20" class="line" lang="java">	</span>
+<span id="LC21" class="line" lang="java">	<span class="nd">@Test</span></span>
+<span id="LC22" class="line" lang="java">	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_set_name</span><span class="o">()</span> <span class="o">{</span></span>
+<span id="LC23" class="line" lang="java">		<span class="n">Player</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Player</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">3000</span><span class="o">);</span></span>
+<span id="LC24" class="line" lang="java">		<span class="n">p</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">);</span></span>
+<span id="LC25" class="line" lang="java">		<span class="n">assertEquals</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">,</span> <span class="n">p</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span></span>
+<span id="LC26" class="line" lang="java">	<span class="o">}</span></span>
+<span id="LC27" class="line" lang="java">	</span>
+<span id="LC28" class="line" lang="java">	<span class="nd">@Test</span></span>
+<span id="LC29" class="line" lang="java">	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_set_addMoney</span><span class="o">()</span> <span class="o">{</span></span>
+<span id="LC30" class="line" lang="java">		<span class="n">Player</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Player</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">3000</span><span class="o">);</span></span>
+<span id="LC31" class="line" lang="java">		<span class="n">p</span><span class="o">.</span><span class="na">addMoney</span><span class="o">(</span><span class="mi">200</span><span class="o">);</span></span>
+<span id="LC32" class="line" lang="java">		<span class="n">assertEquals</span><span class="o">(</span><span class="mi">3200</span><span class="o">,</span><span class="n">p</span><span class="o">.</span><span class="na">getMoney</span><span class="o">());</span></span>
+<span id="LC33" class="line" lang="java">	<span class="o">}</span></span>
+<span id="LC34" class="line" lang="java">	</span>
+<span id="LC35" class="line" lang="java">	<span class="nd">@Test</span></span>
+<span id="LC36" class="line" lang="java">	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_set_takeMoney</span><span class="o">()</span> <span class="o">{</span></span>
+<span id="LC37" class="line" lang="java">		<span class="n">Player</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Player</span><span class="o">(</span><span class="s">"Sehaj"</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">3000</span><span class="o">);</span></span>
+<span id="LC38" class="line" lang="java">		<span class="n">p</span><span class="o">.</span><span class="na">takeMoney</span><span class="o">(</span><span class="mi">200</span><span class="o">);</span></span>
+<span id="LC39" class="line" lang="java">		<span class="n">assertEquals</span><span class="o">(</span><span class="mi">2800</span><span class="o">,</span><span class="n">p</span><span class="o">.</span><span class="na">getMoney</span><span class="o">());</span></span>
+<span id="LC40" class="line" lang="java">	<span class="o">}</span></span>
+<span id="LC41" class="line" lang="java">	</span>
+<span id="LC42" class="line" lang="java"></span>
+<span id="LC43" class="line" lang="java"><span class="o">}</span></span></code></pre>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+</article>
+</div>
+
+</div>
+<div class="modal" id="modal-remove-blob">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" href="#">×</a>
+<h3 class="page-title">Delete playerTest.java</h3>
+</div>
+<div class="modal-body">
+<form class="form-horizontal js-delete-blob-form js-quick-submit js-requires-input" action="/sehajveer.bring/Monopoly_Game_Project/blob/master/demo3/playerTest.java" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="_method" value="delete" type="hidden"><input name="authenticity_token" value="BAvHzcQEqoJZICEaW6DCr3lhysh1Ws56M5uSuqJbsi7OYmwVlGXaKBYjXa/Oo38DmnL8XMkhZg+wTN6ykc2Zfg==" type="hidden"><div class="form-group commit_message-group">
+<label class="control-label" for="commit_message-b690875a1294169ed6e125cde752a053">Commit message
+</label><div class="col-sm-10">
+<div class="commit-message-container">
+<div class="max-width-marker"></div>
+<textarea name="commit_message" id="commit_message-b690875a1294169ed6e125cde752a053" class="form-control js-commit-message" placeholder="Delete playerTest.java" required="required" rows="3">Delete playerTest.java</textarea>
+</div>
+</div>
+</div>
+
+<div class="form-group branch">
+<label class="control-label" for="branch_name">Target Branch</label>
+<div class="col-sm-10">
+<input name="branch_name" id="branch_name" value="master" required="required" class="form-control js-branch-name ref-name" type="text">
+<div class="js-create-merge-request-container" style="display: none;">
+<div class="checkbox">
+<label for="create_merge_request-3b186ea1585a3ab67f9224c91fbf489e"><input name="create_merge_request" id="create_merge_request-3b186ea1585a3ab67f9224c91fbf489e" value="1" class="js-create-merge-request" type="checkbox">
+Start a <strong>new merge request</strong> with these changes
+</label></div>
+
+</div>
+</div>
+</div>
+<input name="original_branch" id="original_branch" value="master" class="js-original-branch" type="hidden">
+
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+<button name="button" type="submit" class="btn btn-remove btn-remove-file">Delete file</button>
+<a class="btn btn-cancel" data-dismiss="modal" href="#">Cancel</a>
+</div>
+</div>
+</form></div>
+</div>
+</div>
+</div>
+
+<div class="modal" id="modal-upload-blob">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a class="close" data-dismiss="modal" href="#">×</a>
+<h3 class="page-title">Replace playerTest.java</h3>
+</div>
+<div class="modal-body">
+<form class="js-quick-submit js-upload-blob-form form-horizontal" data-method="put" action="/sehajveer.bring/Monopoly_Game_Project/update/master/demo3/playerTest.java" accept-charset="UTF-8" method="post"><input name="utf8" value="✓" type="hidden"><input name="_method" value="put" type="hidden"><input name="authenticity_token" value="BAvHzcQEqoJZICEaW6DCr3lhysh1Ws56M5uSuqJbsi7OYmwVlGXaKBYjXa/Oo38DmnL8XMkhZg+wTN6ykc2Zfg==" type="hidden"><div class="dropzone dz-clickable">
+<div class="dropzone-previews blob-upload-dropzone-previews">
+<p class="dz-message light">
+Attach a file by drag &amp; drop or <a class="markdown-selector" href="#">click to upload</a>
+</p>
+</div>
+</div>
+<br>
+<div class="dropzone-alerts alert alert-danger data" style="display:none"></div>
+<div class="form-group commit_message-group">
+<label class="control-label" for="commit_message-2ef7faf9e7f881c458b981a55e69d453">Commit message
+</label><div class="col-sm-10">
+<div class="commit-message-container">
+<div class="max-width-marker"></div>
+<textarea name="commit_message" id="commit_message-2ef7faf9e7f881c458b981a55e69d453" class="form-control js-commit-message" placeholder="Replace playerTest.java" required="required" rows="3">Replace playerTest.java</textarea>
+</div>
+</div>
+</div>
+
+<div class="form-group branch">
+<label class="control-label" for="branch_name">Target Branch</label>
+<div class="col-sm-10">
+<input name="branch_name" id="branch_name" value="master" required="required" class="form-control js-branch-name ref-name" type="text">
+<div class="js-create-merge-request-container" style="display: none;">
+<div class="checkbox">
+<label for="create_merge_request-10d284e2b3df3ee09af10f3fb57910f4"><input name="create_merge_request" id="create_merge_request-10d284e2b3df3ee09af10f3fb57910f4" value="1" class="js-create-merge-request" type="checkbox">
+Start a <strong>new merge request</strong> with these changes
+</label></div>
+
+</div>
+</div>
+</div>
+<input name="original_branch" id="original_branch" value="master" class="js-original-branch" type="hidden">
+
+<div class="form-actions">
+<button name="button" type="button" class="btn btn-create btn-upload-file" id="submit-all"><i aria-hidden="true" data-hidden="true" class="fa fa-spin fa-spinner js-loading-icon hidden"></i>
+Replace file
+</button><a class="btn btn-cancel" data-dismiss="modal" href="#">Cancel</a>
+</div>
+</form></div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<input class="dz-hidden-input" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;" type="file"></body></html>
